@@ -1,7 +1,12 @@
 "use client";
 import Link from "next/link";
 import { usePathname } from "next/navigation";
-import type { Persona } from "@/types";
+import {
+  Show,
+  SignInButton,
+  SignUpButton,
+  UserButton,
+} from "@clerk/nextjs";
 import { LogoMark } from "./LogoMark";
 import { Icon, type IconName } from "./Icon";
 import { ModeToggle } from "./ModeToggle";
@@ -14,21 +19,8 @@ const SCREENS: { href: string; label: string; icon: IconName }[] = [
   { href: "/dashboard", label: "Dashboard", icon: "grid" },
 ];
 
-function personaForPath(pathname: string): Persona {
-  if (pathname.startsWith("/dashboard")) return "admin";
-  if (pathname.startsWith("/first-year")) return "grad";
-  return "individual";
-}
-
-function initialsFor(persona: Persona) {
-  if (persona === "admin") return "AK";
-  if (persona === "grad") return "NV";
-  return "EC";
-}
-
 export function TopNav() {
   const pathname = usePathname() ?? "/";
-  const persona = personaForPath(pathname);
 
   return (
     <nav
@@ -101,24 +93,69 @@ export function TopNav() {
           })}
         </div>
 
-        <div style={{ display: "flex", alignItems: "center", gap: 12 }}>
+        <div style={{ display: "flex", alignItems: "center", gap: 10 }}>
           <ModeToggle />
-          <div
-            style={{
-              width: 36,
-              height: 36,
-              borderRadius: "50%",
-              background: "linear-gradient(135deg, var(--color-primary), var(--color-bg))",
-              border: "var(--hairline-strong)",
-              display: "grid",
-              placeItems: "center",
-              fontSize: 12,
-              fontWeight: 600,
-              color: "var(--color-accent)",
-            }}
-          >
-            {initialsFor(persona)}
-          </div>
+          <Show when="signed-out">
+            <SignInButton mode="modal">
+              <button
+                type="button"
+                style={{
+                  height: 32,
+                  padding: "0 14px",
+                  background: "transparent",
+                  border: "var(--hairline-strong)",
+                  borderRadius: "var(--radius)",
+                  color: "var(--color-muted)",
+                  fontSize: 13,
+                  fontWeight: 500,
+                  cursor: "pointer",
+                  transition: "all 0.18s ease",
+                }}
+                onMouseEnter={(e) => {
+                  e.currentTarget.style.color = "var(--color-text)";
+                }}
+                onMouseLeave={(e) => {
+                  e.currentTarget.style.color = "var(--color-muted)";
+                }}
+              >
+                Sign in
+              </button>
+            </SignInButton>
+            <SignUpButton mode="modal">
+              <button
+                type="button"
+                style={{
+                  height: 32,
+                  padding: "0 14px",
+                  background: "var(--color-accent)",
+                  border: "1px solid var(--color-accent)",
+                  borderRadius: "var(--radius)",
+                  color: "var(--color-bg)",
+                  fontSize: 13,
+                  fontWeight: 600,
+                  cursor: "pointer",
+                  transition: "all 0.18s ease",
+                }}
+                onMouseEnter={(e) => {
+                  e.currentTarget.style.filter = "brightness(1.08)";
+                }}
+                onMouseLeave={(e) => {
+                  e.currentTarget.style.filter = "none";
+                }}
+              >
+                Sign up
+              </button>
+            </SignUpButton>
+          </Show>
+          <Show when="signed-in">
+            <UserButton
+              appearance={{
+                elements: {
+                  avatarBox: { width: 32, height: 32 },
+                },
+              }}
+            />
+          </Show>
         </div>
       </div>
     </nav>

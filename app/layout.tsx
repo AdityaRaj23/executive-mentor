@@ -1,5 +1,6 @@
 import type { Metadata } from "next";
 import { Cormorant_Garamond, Hanken_Grotesk, JetBrains_Mono } from "next/font/google";
+import { ClerkProvider } from "@clerk/nextjs";
 import { TopNav } from "@/components/shared/TopNav";
 import { ThemeBootstrap } from "@/components/shared/ThemeBootstrap";
 import "./globals.css";
@@ -37,9 +38,11 @@ export default function RootLayout({ children }: { children: React.ReactNode }) 
       suppressHydrationWarning
     >
       <body>
-        <ThemeBootstrap />
-        <TopNav />
-        <main>{children}</main>
+        <ClerkProvider>
+          <ThemeBootstrap />
+          <TopNav />
+          <main>{children}</main>
+        </ClerkProvider>
       </body>
     </html>
   );
