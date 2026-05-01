@@ -3,7 +3,6 @@ import { useState } from "react";
 import { CTA } from "@/components/shared/CTA";
 import { Icon } from "@/components/shared/Icon";
 import { Kicker } from "@/components/shared/Kicker";
-import { claude } from "@/lib/mockAI";
 import type { Archetype, DiagnosticAnswers, ThirtyDayBrief as BriefShape } from "@/types";
 import { CheckRow } from "./CheckRow";
 
@@ -26,30 +25,28 @@ export function ThirtyDayBrief({
     if (!archetype) return;
     setLoading(true);
     try {
-      const sys = `You are M, a career mentor for fresh grads. Generate a concrete 30-DAY STARTER PLAN for someone exploring archetype "${archetype.label} — ${archetype.tag}". Their diagnostic: ${JSON.stringify(answers)}.
-
-Goal: cut paralysis. Specific is better than ambitious. Output ONLY valid JSON.
-
-Schema:
-{
-  "north_star": "<one sentence: what success in 30 days looks like>",
-  "ship_one_thing": {"title":"<concrete artifact to make>", "why":"<1 sentence>", "first_three_steps":["s1","s2","s3"]},
-  "talk_to_five": [{"who":"<archetype of person>", "how":"<concrete script or channel>"}, ... 5 items],
-  "two_applications": [{"target":"<role / category>", "where":"<concrete companies or programs>"}, ... 2 items],
-  "weekly_micro": ["<week 1 micro-action>", "<week 2>", "<week 3>", "<week 4>"]
-}`;
-      const reply = await claude.complete({ messages: [{ role: "user", content: sys }] });
-      const m = reply.match(/\{[\s\S]*\}/);
-      if (m) {
-        setBrief({
-          ...JSON.parse(m[0]),
-          generatedFor: archetype.id,
-          _doneTalk: [],
-          _doneApps: [],
-          _doneShip: [],
-          _doneWeeks: [],
-        });
+      const res = await fetch("/api/firstyear/generate", {
+        method: "POST",
+        headers: { "Content-Type": "application/json" },
+        body: JSON.stringify({
+          kind: "thirty-day",
+          answers,
+          archetype: { id: archetype.id, label: archetype.label, tag: archetype.tag },
+        }),
+      });
+      if (!res.ok) {
+        const { error } = await res.json().catch(() => ({ error: res.statusText }));
+        throw new Error(error || "Request failed");
       }
+      const data = (await res.json()) as Omit<BriefShape, "generatedFor" | "_doneTalk" | "_doneApps" | "_doneShip" | "_doneWeeks">;
+      setBrief({
+        ...data,
+        generatedFor: archetype.id,
+        _doneTalk: [],
+        _doneApps: [],
+        _doneShip: [],
+        _doneWeeks: [],
+      });
     } catch {
       window.alert("M had trouble drafting your brief. Try again.");
     } finally {

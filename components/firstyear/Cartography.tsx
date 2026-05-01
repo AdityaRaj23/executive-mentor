@@ -7,11 +7,13 @@ export function Cartography({
   all,
   selected,
   onSelect,
+  fitNotes,
 }: {
   matches: Archetype[];
   all: Archetype[];
   selected: string | null;
   onSelect: (id: string) => void;
+  fitNotes?: Record<string, string> | null;
 }) {
   const matchMap: Record<string, number> = {};
   matches.forEach((m, i) => {
@@ -90,6 +92,35 @@ export function Cartography({
                 {a.tag}
               </div>
               <div style={{ fontSize: 13, color: "var(--color-muted)", lineHeight: 1.5 }}>{a.blurb}</div>
+              {fitNotes?.[a.id] && (
+                <div
+                  style={{
+                    marginTop: 12,
+                    paddingTop: 12,
+                    borderTop: "1px solid rgba(255,255,255,0.06)",
+                    display: "flex",
+                    gap: 10,
+                  }}
+                >
+                  <div
+                    style={{
+                      width: 2,
+                      flexShrink: 0,
+                      background: isPrimary ? "var(--color-accent)" : "rgba(255,255,255,0.15)",
+                    }}
+                  />
+                  <div
+                    style={{
+                      fontSize: 12,
+                      fontStyle: "italic",
+                      color: isPrimary ? "var(--color-text)" : "var(--color-muted)",
+                      lineHeight: 1.5,
+                    }}
+                  >
+                    {fitNotes[a.id]}
+                  </div>
+                </div>
+              )}
             </button>
           );
         })}

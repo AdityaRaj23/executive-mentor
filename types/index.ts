@@ -58,6 +58,11 @@ export interface Archetype {
   skills: string[];
 }
 
+export interface ArchetypeFit {
+  id: string;
+  why: string;
+}
+
 export interface DiagnosticAnswers {
   background?: string;
   lostInTime?: string;

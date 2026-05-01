@@ -1,9 +1,52 @@
+"use client";
+import { useState } from "react";
+import { CTA } from "@/components/shared/CTA";
 import { Kicker } from "@/components/shared/Kicker";
-import type { Archetype } from "@/types";
+import type { Archetype, DiagnosticAnswers } from "@/types";
 import { DataBlock } from "./DataBlock";
 
-export function ArchetypeDeepDive({ archetype: a }: { archetype: Archetype | undefined }) {
+export function ArchetypeDeepDive({
+  archetype: a,
+  answers,
+  personalNotes,
+  setPersonalNotes,
+}: {
+  archetype: Archetype | undefined;
+  answers: DiagnosticAnswers;
+  personalNotes: Record<string, string> | null;
+  setPersonalNotes: (next: Record<string, string>) => void;
+}) {
+  const [loading, setLoading] = useState(false);
+
   if (!a) return null;
+
+  const paragraph = personalNotes?.[a.id];
+
+  const personalize = async () => {
+    setLoading(true);
+    try {
+      const res = await fetch("/api/firstyear/generate", {
+        method: "POST",
+        headers: { "Content-Type": "application/json" },
+        body: JSON.stringify({
+          kind: "archetype-personal",
+          answers,
+          archetype: { id: a.id, label: a.label, tag: a.tag },
+        }),
+      });
+      if (!res.ok) {
+        const { error } = await res.json().catch(() => ({ error: res.statusText }));
+        throw new Error(error || "Request failed");
+      }
+      const { paragraph: text } = (await res.json()) as { paragraph: string };
+      setPersonalNotes({ ...(personalNotes ?? {}), [a.id]: text });
+    } catch {
+      window.alert("M had trouble personalizing this. Try again.");
+    } finally {
+      setLoading(false);
+    }
+  };
+
   return (
     <div className="glass" style={{ padding: 40, marginBottom: 48 }}>
       <div
@@ -25,10 +68,55 @@ export function ArchetypeDeepDive({ archetype: a }: { archetype: Archetype | und
             {a.tag}.
           </div>
         </div>
-        <div className="mono" style={{ fontSize: 11, color: "var(--color-accent)" }}>
-          ● live preview
+        <div style={{ display: "flex", alignItems: "center", gap: 12 }}>
+          {!paragraph && (
+            <CTA size="sm" icon="sparkle" onClick={personalize}>
+              {loading ? "M is reading…" : "Personalize for me"}
+            </CTA>
+          )}
+          {paragraph && (
+            <CTA variant="ghost" size="sm" onClick={personalize}>
+              {loading ? "Re-reading…" : "Re-personalize"}
+            </CTA>
+          )}
         </div>
       </div>
+
+      {loading && !paragraph && (
+        <div className="glass shimmer" style={{ height: 88, marginBottom: 28 }} />
+      )}
+
+      {paragraph && (
+        <div
+          style={{
+            marginBottom: 32,
+            padding: "20px 22px",
+            borderLeft: "2px solid var(--color-accent)",
+            background: "rgba(16,185,129,0.04)",
+          }}
+        >
+          <div
+            className="uc"
+            style={{
+              fontSize: 9,
+              color: "var(--color-accent)",
+              letterSpacing: "0.14em",
+              marginBottom: 10,
+            }}
+          >
+            How this plays out for you
+          </div>
+          <div
+            style={{
+              fontSize: 15,
+              lineHeight: 1.6,
+              color: "var(--color-text)",
+            }}
+          >
+            {paragraph}
+          </div>
+        </div>
+      )}
 
       <div
         style={{

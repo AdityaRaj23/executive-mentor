@@ -2,7 +2,6 @@
 import { useState } from "react";
 import { CTA } from "@/components/shared/CTA";
 import { Kicker } from "@/components/shared/Kicker";
-import { claude } from "@/lib/mockAI";
 import type { Archetype, DiagnosticAnswers, TalentStack as TalentStackShape } from "@/types";
 
 export function TalentStack({
@@ -22,21 +21,21 @@ export function TalentStack({
     if (!archetype) return;
     setLoading(true);
     try {
-      const sys = `You are M, a career mentor. Based on the user's diagnostic answers, surface their TALENT STACK — concrete strengths and signals, framed generously but specifically. They are early-career, possibly fresh out of school. Most fresh grads systematically undervalue themselves; your job is to NAME their latent assets with evidence.
-
-Diagnostic answers: ${JSON.stringify(answers)}
-They're exploring archetype: ${archetype.label} (${archetype.tag}).
-
-Output ONLY valid JSON, no prose, no markdown. Schema:
-{
-  "headline": "<one short evidence-based statement, like 'You have an unusual combination of X + Y + Z that 87% of grads don't.'>",
-  "strengths": [{"label":"<short>", "evidence":"<10-18 word specific reason from their answers>"}, ... 4 items],
-  "latent": [{"label":"<latent strength they undervalue>", "why":"<1 sentence>"}, ... 2 items],
-  "weak_signals_to_strengthen": [{"label":"<thing missing>", "first_step":"<concrete step this month>"}, ... 2 items]
-}`;
-      const reply = await claude.complete({ messages: [{ role: "user", content: sys }] });
-      const m = reply.match(/\{[\s\S]*\}/);
-      if (m) setStack(JSON.parse(m[0]));
+      const res = await fetch("/api/firstyear/generate", {
+        method: "POST",
+        headers: { "Content-Type": "application/json" },
+        body: JSON.stringify({
+          kind: "talent-stack",
+          answers,
+          archetype: { id: archetype.id, label: archetype.label, tag: archetype.tag },
+        }),
+      });
+      if (!res.ok) {
+        const { error } = await res.json().catch(() => ({ error: res.statusText }));
+        throw new Error(error || "Request failed");
+      }
+      const data = (await res.json()) as TalentStackShape;
+      setStack(data);
     } catch {
       window.alert("M had trouble generating your stack. Try again.");
     } finally {
