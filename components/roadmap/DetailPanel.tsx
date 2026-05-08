@@ -7,9 +7,11 @@ import type { Milestone } from "@/types";
 export function DetailPanel({
   milestone,
   onToggleTask,
+  onDiscuss,
 }: {
   milestone: Milestone | undefined;
   onToggleTask: (idx: number) => void;
+  onDiscuss: (m: Milestone) => void;
 }) {
   if (!milestone) return null;
   return (
@@ -108,7 +110,12 @@ export function DetailPanel({
         </div>
       </div>
       <div style={{ marginTop: 24 }}>
-        <CTA size="sm" icon="sparkle" style={{ width: "100%", justifyContent: "center" }}>
+        <CTA
+          size="sm"
+          icon="sparkle"
+          style={{ width: "100%", justifyContent: "center" }}
+          onClick={() => onDiscuss(milestone)}
+        >
           Discuss with M
         </CTA>
       </div>

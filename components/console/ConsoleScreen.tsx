@@ -1,37 +1,68 @@
 "use client";
-import { useEffect, useRef, useState } from "react";
-import { boardroom } from "@/lib/voice";
-import { claude } from "@/lib/mockAI";
+import { useEffect, useMemo, useRef, useState } from "react";
+import { useRouter, useSearchParams } from "next/navigation";
+import { useUser } from "@clerk/nextjs";
+import { buildWelcome } from "@/lib/voice";
 import { load, save, remove } from "@/lib/storage";
-import { SEED_DOSSIER } from "@/data/dossier";
-import type { Dossier, Message } from "@/types";
+import { SEED_DOSSIER, buildDossier, type FirstYearSnapshot } from "@/data/dossier";
+import { ARCHETYPES } from "@/data/archetypes";
+import type {
+  Archetype,
+  DiagnosticAnswers,
+  Dossier,
+  Message,
+  TalentStack,
+  ThirtyDayBrief,
+} from "@/types";
 import { ChatBubble } from "./ChatBubble";
 import { ChatHeader } from "./ChatHeader";
 import { ChatInput } from "./ChatInput";
 import { Dossier as DossierPanel } from "./Dossier";
-import { OnboardingFlow } from "./OnboardingFlow";
 import { Suggestions } from "./Suggestions";
 import { ThinkingIndicator } from "./ThinkingIndicator";
 
 const STORE_KEY = "em.console.v1";
+const FIRSTYEAR_KEY = "em.firstyear.v1";
 
 interface PersistedState {
-  onboarded: boolean;
   messages: Message[];
   dossier: Dossier;
 }
 
-const INITIAL: PersistedState = {
-  onboarded: false,
-  messages: [
-    {
-      role: "ai",
-      header: boardroom.welcomeHeader,
-      body: boardroom.welcomeBody,
-    },
-  ],
-  dossier: SEED_DOSSIER,
-};
+interface PersistedFirstYear {
+  stage?: "diagnostic" | "ranking" | "result";
+  answers?: DiagnosticAnswers;
+  topMatches?: Archetype[] | null;
+  selectedArch?: string | null;
+  stack?: TalentStack | null;
+  brief?: ThirtyDayBrief | null;
+}
+
+function readFirstYear(): PersistedFirstYear | null {
+  if (typeof window === "undefined") return null;
+  return load<PersistedFirstYear>(FIRSTYEAR_KEY, {});
+}
+
+function isFirstYearComplete(fy: PersistedFirstYear | null): boolean {
+  return Boolean(
+    fy &&
+      fy.stage === "result" &&
+      fy.selectedArch &&
+      Array.isArray(fy.topMatches) &&
+      fy.topMatches.length > 0,
+  );
+}
+
+function snapshotFromFirstYear(fy: PersistedFirstYear): FirstYearSnapshot {
+  const archetype =
+    ARCHETYPES.find((a) => a.id === fy.selectedArch) ?? fy.topMatches?.[0] ?? undefined;
+  return {
+    archetype,
+    answers: fy.answers,
+    stack: fy.stack ?? null,
+    brief: fy.brief ?? null,
+  };
+}
 
 function AdminViewOverlay() {
   return (
@@ -56,41 +87,131 @@ function AdminViewOverlay() {
   );
 }
 
+function GateScreen() {
+  return (
+    <div
+      style={{
+        maxWidth: 720,
+        margin: "0 auto",
+        padding: "120px 32px",
+        textAlign: "center",
+        color: "var(--color-muted)",
+        fontFamily: "var(--font-mono)",
+        fontSize: 13,
+        letterSpacing: "0.02em",
+      }}
+    >
+      Routing you to your diagnostic…
+    </div>
+  );
+}
+
 export default function ConsoleScreen() {
+  const router = useRouter();
+  const searchParams = useSearchParams();
+  const { user, isLoaded: userLoaded } = useUser();
+
   const [hydrated, setHydrated] = useState(false);
-  const [onboarded, setOnboarded] = useState<boolean>(INITIAL.onboarded);
-  const [messages, setMessages] = useState<Message[]>(INITIAL.messages);
-  const [dossier, setDossier] = useState<Dossier>(INITIAL.dossier);
+  const [gated, setGated] = useState(false);
+  const [messages, setMessages] = useState<Message[]>([]);
+  const [dossier, setDossier] = useState<Dossier>(SEED_DOSSIER);
+  const [firstYear, setFirstYear] = useState<FirstYearSnapshot | null>(null);
   const [adminView, setAdminView] = useState(false);
   const [input, setInput] = useState("");
   const [loading, setLoading] = useState(false);
   const scrollRef = useRef<HTMLDivElement | null>(null);
+  const seedConsumedRef = useRef(false);
 
-  // Hydrate from localStorage on mount
+  // Hydrate: gate on first-year, then build dossier + welcome
   useEffect(() => {
+    if (!userLoaded) return;
+
+    const fy = readFirstYear();
+    if (!isFirstYearComplete(fy)) {
+      setGated(true);
+      router.replace("/first-year");
+      return;
+    }
+
+    const snap = snapshotFromFirstYear(fy!);
+    setFirstYear(snap);
+
     const stored = load<Partial<PersistedState>>(STORE_KEY, {});
-    if (stored.onboarded) setOnboarded(true);
-    if (stored.messages?.length) setMessages(stored.messages);
-    if (stored.dossier) setDossier(stored.dossier);
+    const firstName = user?.firstName ?? null;
+    const fullName = user?.fullName ?? null;
+    const baseDossier = buildDossier({ firstName, fullName, firstYear: snap });
+    const nextDossier: Dossier = {
+      ...baseDossier,
+      // preserve any per-skill confidence drift from prior session
+      skills: baseDossier.skills.map((s) => {
+        const prior = stored.dossier?.skills?.find((p) => p.label === s.label);
+        return prior ? { ...s, conf: prior.conf } : s;
+      }),
+      signals: stored.dossier?.signals?.length
+        ? Array.from(new Set([...stored.dossier.signals, ...baseDossier.signals])).slice(0, 5)
+        : baseDossier.signals,
+    };
+
+    const priorMessages = stored.messages ?? [];
+    const isReturning = priorMessages.some((m) => m.role === "user");
+    const welcome = buildWelcome({
+      firstName: firstName ?? undefined,
+      archetypeLabel: snap.archetype?.label,
+      archetypeTag: snap.archetype?.tag,
+      topStrength: snap.stack?.strengths?.[0]?.label,
+      isReturning,
+    });
+
+    const initialMessages: Message[] = priorMessages.length
+      ? priorMessages
+      : [{ role: "ai", header: welcome.header, body: welcome.body }];
+
+    // If returning user has prior messages, refresh just the leading AI welcome
+    // so the greeting reflects their current state on each visit.
+    if (priorMessages.length && priorMessages[0]?.role === "ai") {
+      initialMessages[0] = { role: "ai", header: welcome.header, body: welcome.body };
+    }
+
+    setMessages(initialMessages);
+    setDossier(nextDossier);
     setHydrated(true);
-  }, []);
+  }, [userLoaded, user, router]);
 
   useEffect(() => {
     if (!hydrated) return;
-    save(STORE_KEY, { onboarded, messages, dossier });
-  }, [hydrated, onboarded, messages, dossier]);
+    save<PersistedState>(STORE_KEY, { messages, dossier });
+  }, [hydrated, messages, dossier]);
 
   useEffect(() => {
     if (scrollRef.current) scrollRef.current.scrollTop = scrollRef.current.scrollHeight;
   }, [messages, loading]);
 
   const resetSession = () => {
-    if (!window.confirm("Clear this session and re-run onboarding?")) return;
+    if (!window.confirm("Clear this conversation? Your diagnostic stays.")) return;
     remove(STORE_KEY);
-    setOnboarded(false);
-    setMessages([{ role: "ai", header: boardroom.welcomeHeader, body: boardroom.welcomeBody }]);
-    setDossier(SEED_DOSSIER);
+    if (!firstYear) return;
+    const firstName = user?.firstName ?? null;
+    const fullName = user?.fullName ?? null;
+    const fresh = buildDossier({ firstName, fullName, firstYear });
+    const welcome = buildWelcome({
+      firstName: firstName ?? undefined,
+      archetypeLabel: firstYear.archetype?.label,
+      archetypeTag: firstYear.archetype?.tag,
+      topStrength: firstYear.stack?.strengths?.[0]?.label,
+      isReturning: false,
+    });
+    setMessages([{ role: "ai", header: welcome.header, body: welcome.body }]);
+    setDossier(fresh);
   };
+
+  const firstYearForApi = useMemo(() => {
+    if (!firstYear?.archetype) return undefined;
+    return {
+      archetype: { label: firstYear.archetype.label, tag: firstYear.archetype.tag },
+      answers: firstYear.answers,
+      stackHeadline: firstYear.stack?.headline,
+    };
+  }, [firstYear]);
 
   const send = async (textOverride?: string) => {
     const text = textOverride ?? input.trim();
@@ -102,23 +223,16 @@ export default function ConsoleScreen() {
     setLoading(true);
 
     try {
-      const baseSys = boardroom.sysPrompt;
-      const dossierStr = JSON.stringify({
-        goals: dossier.goals.map((g) => g.label),
-        skills: dossier.skills,
-        signals: dossier.signals,
+      const res = await fetch("/api/console/chat", {
+        method: "POST",
+        headers: { "content-type": "application/json" },
+        body: JSON.stringify({ messages: next, dossier, firstYear: firstYearForApi }),
       });
-      const sys = `${baseSys}\n\nThe user is ${dossier.member}, ${dossier.role}, ${dossier.tenure}. Current dossier: ${dossierStr}\n\nIMPORTANT: After your prose response, on its own line at the very end, output a single JSON object on one line in this exact shape:\n<<<DOSSIER>>>{"skill_deltas":[{"label":"<existing skill label>","delta":<-5..+5 integer>}], "new_signal":"<short observation or null>"}<<<END>>>\n\nOnly include skills already in the dossier. Pick at most 2 deltas tied to what was discussed. The signal should be a sharp 8-12 word observation about the user revealed by THIS exchange, or null.`;
-      const reply = await claude.complete({
-        messages: [
-          {
-            role: "user",
-            content: `${sys}\n\nConversation so far:\n${next
-              .map((m) => `${m.role === "user" ? "User" : "M"}: ${m.body}`)
-              .join("\n")}\n\nM:`,
-          },
-        ],
-      });
+      if (!res.ok) {
+        const err = await res.json().catch(() => ({}));
+        throw new Error(err?.error || `Request failed (${res.status})`);
+      }
+      const { text: reply } = (await res.json()) as { text: string };
 
       let prose = reply || "";
       let deltas: { label: string; delta: number }[] = [];
@@ -158,20 +272,18 @@ export default function ConsoleScreen() {
     }
   };
 
-  if (!onboarded) {
-    return (
-      <OnboardingFlow
-        onDone={(answers) => {
-          const seed = `Onboarding answers — Target: ${answers.q1}. Avoiding: ${answers.q2}. Studying: ${answers.q3}.`;
-          setMessages([
-            { role: "ai", header: boardroom.welcomeHeader, body: boardroom.welcomeBody },
-            { role: "user", body: seed },
-          ]);
-          setOnboarded(true);
-          setTimeout(() => send(seed), 100);
-        }}
-      />
-    );
+  useEffect(() => {
+    if (!hydrated || seedConsumedRef.current) return;
+    const seed = searchParams.get("seed");
+    if (!seed) return;
+    seedConsumedRef.current = true;
+    router.replace("/console");
+    void send(seed);
+    // eslint-disable-next-line react-hooks/exhaustive-deps
+  }, [hydrated, searchParams, router]);
+
+  if (gated || !hydrated) {
+    return <GateScreen />;
   }
 
   return (
