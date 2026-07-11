@@ -1,4 +1,5 @@
 "use client";
+import Link from "next/link";
 import { useEffect, useState } from "react";
 import { CTA } from "@/components/shared/CTA";
 import { Kicker } from "@/components/shared/Kicker";
@@ -57,6 +58,11 @@ function ResultHeader({ onReset }: { onReset: () => void }) {
         </p>
       </div>
       <div style={{ display: "flex", gap: 10, flexShrink: 0 }}>
+        <Link href="/first-year/assessment" style={{ textDecoration: "none" }}>
+          <CTA variant="accent" size="sm">
+            Full assessment
+          </CTA>
+        </Link>
         <CTA variant="ghost" size="sm" onClick={onReset}>
           Re-take diagnostic
         </CTA>
@@ -192,7 +198,19 @@ export default function FirstYearScreen() {
   };
 
   if (stage === "diagnostic") {
-    return <Diagnostic onComplete={finishDiagnostic} />;
+    return (
+      <>
+        <Diagnostic onComplete={finishDiagnostic} />
+        <div style={{ textAlign: "center", padding: "0 32px 48px" }}>
+          <Link
+            href="/first-year/assessment"
+            style={{ color: "var(--color-muted)", fontSize: 13, textDecoration: "none" }}
+          >
+            Want to go deeper? Take the full 7-module assessment →
+          </Link>
+        </div>
+      </>
+    );
   }
 
   if (stage === "ranking") {
