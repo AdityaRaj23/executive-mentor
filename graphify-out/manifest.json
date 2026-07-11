@@ -1,107 +1,882 @@
 {
-  "/Users/adityarajkashyap/Desktop/work/executive-mentor/postcss.config.mjs": 1777630639.2397823,
-  "/Users/adityarajkashyap/Desktop/work/executive-mentor/next-env.d.ts": 1777631891.2224374,
-  "/Users/adityarajkashyap/Desktop/work/executive-mentor/proxy.ts": 1777669538.1192522,
-  "/Users/adityarajkashyap/Desktop/work/executive-mentor/eslint.config.mjs": 1777630639.2395868,
-  "/Users/adityarajkashyap/Desktop/work/executive-mentor/next.config.ts": 1777630639.2401361,
-  "/Users/adityarajkashyap/Desktop/work/executive-mentor/types/index.ts": 1777674528.5898454,
-  "/Users/adityarajkashyap/Desktop/work/executive-mentor/app/layout.tsx": 1777669546.8904002,
-  "/Users/adityarajkashyap/Desktop/work/executive-mentor/app/page.tsx": 1777631253.2609706,
-  "/Users/adityarajkashyap/Desktop/work/executive-mentor/app/first-year/page.tsx": 1777631706.9373438,
-  "/Users/adityarajkashyap/Desktop/work/executive-mentor/app/roadmap/page.tsx": 1777631568.8778477,
-  "/Users/adityarajkashyap/Desktop/work/executive-mentor/app/dashboard/page.tsx": 1777631824.4779768,
-  "/Users/adityarajkashyap/Desktop/work/executive-mentor/app/api/firstyear/generate/route.ts": 1777675608.1457512,
-  "/Users/adityarajkashyap/Desktop/work/executive-mentor/app/console/page.tsx": 1777631445.0877306,
-  "/Users/adityarajkashyap/Desktop/work/executive-mentor/test/project/tweaks-panel.jsx": 1777636650.5014093,
-  "/Users/adityarajkashyap/Desktop/work/executive-mentor/test/project/export/src/tweaks-panel.jsx": 1777636650.4976308,
-  "/Users/adityarajkashyap/Desktop/work/executive-mentor/test/project/export/src/src/landing.jsx": 1777636650.4960895,
-  "/Users/adityarajkashyap/Desktop/work/executive-mentor/test/project/export/src/src/console.jsx": 1777636650.4941745,
-  "/Users/adityarajkashyap/Desktop/work/executive-mentor/test/project/export/src/src/dashboard.jsx": 1777636650.4947932,
-  "/Users/adityarajkashyap/Desktop/work/executive-mentor/test/project/export/src/src/shared.jsx": 1777636650.4969442,
-  "/Users/adityarajkashyap/Desktop/work/executive-mentor/test/project/export/src/src/roadmap.jsx": 1777636650.4966464,
-  "/Users/adityarajkashyap/Desktop/work/executive-mentor/test/project/export/src/src/themes.jsx": 1777636650.4972787,
-  "/Users/adityarajkashyap/Desktop/work/executive-mentor/test/project/export/src/src/app.jsx": 1777636650.4931376,
-  "/Users/adityarajkashyap/Desktop/work/executive-mentor/test/project/export/src/src/firstyear.jsx": 1777636650.4955862,
-  "/Users/adityarajkashyap/Desktop/work/executive-mentor/test/project/src/landing.jsx": 1777636650.5000434,
-  "/Users/adityarajkashyap/Desktop/work/executive-mentor/test/project/src/console.jsx": 1777636650.498704,
-  "/Users/adityarajkashyap/Desktop/work/executive-mentor/test/project/src/dashboard.jsx": 1777636650.4992044,
-  "/Users/adityarajkashyap/Desktop/work/executive-mentor/test/project/src/shared.jsx": 1777636650.500761,
-  "/Users/adityarajkashyap/Desktop/work/executive-mentor/test/project/src/roadmap.jsx": 1777636650.500371,
-  "/Users/adityarajkashyap/Desktop/work/executive-mentor/test/project/src/themes.jsx": 1777636650.5010576,
-  "/Users/adityarajkashyap/Desktop/work/executive-mentor/test/project/src/app.jsx": 1777636650.4981887,
-  "/Users/adityarajkashyap/Desktop/work/executive-mentor/test/project/src/firstyear.jsx": 1777636650.4996762,
-  "/Users/adityarajkashyap/Desktop/work/executive-mentor/components/firstyear/Diagnostic.tsx": 1777631588.5620327,
-  "/Users/adityarajkashyap/Desktop/work/executive-mentor/components/firstyear/ThirtyDayBrief.tsx": 1777673478.9708931,
-  "/Users/adityarajkashyap/Desktop/work/executive-mentor/components/firstyear/FirstYearScreen.tsx": 1777675707.4611924,
-  "/Users/adityarajkashyap/Desktop/work/executive-mentor/components/firstyear/CheckRow.tsx": 1777631622.0969586,
-  "/Users/adityarajkashyap/Desktop/work/executive-mentor/components/firstyear/DataBlock.tsx": 1777631603.30524,
-  "/Users/adityarajkashyap/Desktop/work/executive-mentor/components/firstyear/ArchetypeDeepDive.tsx": 1777675653.0474288,
-  "/Users/adityarajkashyap/Desktop/work/executive-mentor/components/firstyear/TalentStack.tsx": 1777673453.7181184,
-  "/Users/adityarajkashyap/Desktop/work/executive-mentor/components/firstyear/Cartography.tsx": 1777674541.1190472,
-  "/Users/adityarajkashyap/Desktop/work/executive-mentor/components/landing/PullQuote.tsx": 1777631227.743919,
-  "/Users/adityarajkashyap/Desktop/work/executive-mentor/components/landing/Hero.tsx": 1777631248.1665018,
-  "/Users/adityarajkashyap/Desktop/work/executive-mentor/components/landing/DemoTerminal.tsx": 1777631201.3608775,
-  "/Users/adityarajkashyap/Desktop/work/executive-mentor/components/landing/InvestorTicker.tsx": 1777631239.2535992,
-  "/Users/adityarajkashyap/Desktop/work/executive-mentor/components/landing/ClosingCTA.tsx": 1777631233.8914363,
-  "/Users/adityarajkashyap/Desktop/work/executive-mentor/components/landing/FeatureGrid.tsx": 1777631221.5104318,
-  "/Users/adityarajkashyap/Desktop/work/executive-mentor/components/landing/MetricsRibbon.tsx": 1777631207.6967707,
-  "/Users/adityarajkashyap/Desktop/work/executive-mentor/components/landing/Stat.tsx": 1777631185.5974827,
-  "/Users/adityarajkashyap/Desktop/work/executive-mentor/components/roadmap/RePlanModal.tsx": 1777631541.7582698,
-  "/Users/adityarajkashyap/Desktop/work/executive-mentor/components/roadmap/Card.tsx": 1777631498.365016,
-  "/Users/adityarajkashyap/Desktop/work/executive-mentor/components/roadmap/Timeline.tsx": 1777631518.753289,
-  "/Users/adityarajkashyap/Desktop/work/executive-mentor/components/roadmap/DetailPanel.tsx": 1777631532.2085273,
-  "/Users/adityarajkashyap/Desktop/work/executive-mentor/components/roadmap/StatusBadge.tsx": 1777631490.345576,
-  "/Users/adityarajkashyap/Desktop/work/executive-mentor/components/roadmap/RoadmapScreen.tsx": 1777631567.464837,
-  "/Users/adityarajkashyap/Desktop/work/executive-mentor/components/roadmap/AltCard.tsx": 1777631504.5482342,
-  "/Users/adityarajkashyap/Desktop/work/executive-mentor/components/shared/LogoMark.tsx": 1777631146.8510802,
-  "/Users/adityarajkashyap/Desktop/work/executive-mentor/components/shared/Icon.tsx": 1777631143.776241,
-  "/Users/adityarajkashyap/Desktop/work/executive-mentor/components/shared/ThemeBootstrap.tsx": 1777631166.4268048,
-  "/Users/adityarajkashyap/Desktop/work/executive-mentor/components/shared/Kicker.tsx": 1777631148.9662383,
-  "/Users/adityarajkashyap/Desktop/work/executive-mentor/components/shared/CTA.tsx": 1777631157.6227171,
-  "/Users/adityarajkashyap/Desktop/work/executive-mentor/components/shared/ModeToggle.tsx": 1777631164.147261,
-  "/Users/adityarajkashyap/Desktop/work/executive-mentor/components/shared/TopNav.tsx": 1777669612.574336,
-  "/Users/adityarajkashyap/Desktop/work/executive-mentor/components/dashboard/ReadinessBadge.tsx": 1777631753.6000166,
-  "/Users/adityarajkashyap/Desktop/work/executive-mentor/components/dashboard/MetricRibbon.tsx": 1777631727.5019002,
-  "/Users/adityarajkashyap/Desktop/work/executive-mentor/components/dashboard/PrivacyBanner.tsx": 1777631714.7728627,
-  "/Users/adityarajkashyap/Desktop/work/executive-mentor/components/dashboard/DashHeader.tsx": 1777631721.361043,
-  "/Users/adityarajkashyap/Desktop/work/executive-mentor/components/dashboard/CohortTable.tsx": 1777631764.0457766,
-  "/Users/adityarajkashyap/Desktop/work/executive-mentor/components/dashboard/NarrativePanel.tsx": 1777631751.2846324,
-  "/Users/adityarajkashyap/Desktop/work/executive-mentor/components/dashboard/Block.tsx": 1777631779.0113149,
-  "/Users/adityarajkashyap/Desktop/work/executive-mentor/components/dashboard/SkillHeatmap.tsx": 1777631771.6566343,
-  "/Users/adityarajkashyap/Desktop/work/executive-mentor/components/dashboard/DashboardScreen.tsx": 1777631823.4022136,
-  "/Users/adityarajkashyap/Desktop/work/executive-mentor/components/dashboard/TrajectoryChart.tsx": 1777631742.9032416,
-  "/Users/adityarajkashyap/Desktop/work/executive-mentor/components/dashboard/Stat.tsx": 1777631775.790989,
-  "/Users/adityarajkashyap/Desktop/work/executive-mentor/components/dashboard/DrilldownOverlay.tsx": 1777631812.8055727,
-  "/Users/adityarajkashyap/Desktop/work/executive-mentor/components/console/Suggestions.tsx": 1777631373.1419923,
-  "/Users/adityarajkashyap/Desktop/work/executive-mentor/components/console/ThinkingIndicator.tsx": 1777631355.2390997,
-  "/Users/adityarajkashyap/Desktop/work/executive-mentor/components/console/ContextChip.tsx": 1777631342.0376723,
-  "/Users/adityarajkashyap/Desktop/work/executive-mentor/components/console/Section.tsx": 1777631338.9930172,
-  "/Users/adityarajkashyap/Desktop/work/executive-mentor/components/console/ChatHeader.tsx": 1777631381.741924,
-  "/Users/adityarajkashyap/Desktop/work/executive-mentor/components/console/Dossier.tsx": 1777631400.16204,
-  "/Users/adityarajkashyap/Desktop/work/executive-mentor/components/console/ChatBubble.tsx": 1777631351.4605196,
-  "/Users/adityarajkashyap/Desktop/work/executive-mentor/components/console/ChatInput.tsx": 1777631366.03372,
-  "/Users/adityarajkashyap/Desktop/work/executive-mentor/components/console/ConsoleScreen.tsx": 1777631482.6020513,
-  "/Users/adityarajkashyap/Desktop/work/executive-mentor/components/console/OnboardingFlow.tsx": 1777631444.3379116,
-  "/Users/adityarajkashyap/Desktop/work/executive-mentor/lib/mockAI.ts": 1777631119.0665596,
-  "/Users/adityarajkashyap/Desktop/work/executive-mentor/lib/storage.ts": 1777630867.4341471,
-  "/Users/adityarajkashyap/Desktop/work/executive-mentor/lib/voice.ts": 1777630864.7493572,
-  "/Users/adityarajkashyap/Desktop/work/executive-mentor/lib/hooks/useThemeMode.ts": 1777630870.0477448,
-  "/Users/adityarajkashyap/Desktop/work/executive-mentor/data/ticker.ts": 1777630959.349201,
-  "/Users/adityarajkashyap/Desktop/work/executive-mentor/data/dossier.ts": 1777630881.501598,
-  "/Users/adityarajkashyap/Desktop/work/executive-mentor/data/milestones.ts": 1777630892.5172298,
-  "/Users/adityarajkashyap/Desktop/work/executive-mentor/data/cohort.ts": 1777630952.456795,
-  "/Users/adityarajkashyap/Desktop/work/executive-mentor/data/archetypes.ts": 1777630936.6066265,
-  "/Users/adityarajkashyap/Desktop/work/executive-mentor/README.md": 1777630639.239581,
-  "/Users/adityarajkashyap/Desktop/work/executive-mentor/AGENTS.md": 1777630663.4875886,
-  "/Users/adityarajkashyap/Desktop/work/executive-mentor/CLAUDE.md": 1777634097.0297558,
-  "/Users/adityarajkashyap/Desktop/work/executive-mentor/test/README.md": 1777636650.485972,
-  "/Users/adityarajkashyap/Desktop/work/executive-mentor/test/project/Executive Mentor.html": 1777636650.4874854,
-  "/Users/adityarajkashyap/Desktop/work/executive-mentor/test/project/uploads/design.md": 1777636650.501893,
-  "/Users/adityarajkashyap/Desktop/work/executive-mentor/test/project/export/Executive Mentor.html": 1777636650.4909358,
-  "/Users/adityarajkashyap/Desktop/work/executive-mentor/test/project/export/src/Executive Mentor.html": 1777636650.4923894,
-  "/Users/adityarajkashyap/Desktop/work/executive-mentor/public/file.svg": 1777630639.2398257,
-  "/Users/adityarajkashyap/Desktop/work/executive-mentor/public/vercel.svg": 1777630639.2402616,
-  "/Users/adityarajkashyap/Desktop/work/executive-mentor/public/next.svg": 1777630639.2401426,
-  "/Users/adityarajkashyap/Desktop/work/executive-mentor/public/globe.svg": 1777630639.240137,
-  "/Users/adityarajkashyap/Desktop/work/executive-mentor/public/window.svg": 1777630639.2401648
+  "/Users/adityarajkashyap/Desktop/work/executive-mentor/app/first-year/page.tsx": {
+    "mtime": 1777631706.9373438,
+    "ast_hash": "",
+    "semantic_hash": ""
+  },
+  "/Users/adityarajkashyap/Desktop/work/executive-mentor/app/roadmap/page.tsx": {
+    "mtime": 1777631568.8778477,
+    "ast_hash": "",
+    "semantic_hash": ""
+  },
+  "/Users/adityarajkashyap/Desktop/work/executive-mentor/app/dashboard/page.tsx": {
+    "mtime": 1777631824.4779768,
+    "ast_hash": "",
+    "semantic_hash": ""
+  },
+  "/Users/adityarajkashyap/Desktop/work/executive-mentor/app/console/page.tsx": {
+    "mtime": 1777631445.0877306,
+    "ast_hash": "",
+    "semantic_hash": ""
+  },
+  "/Users/adityarajkashyap/Desktop/work/executive-mentor/test/project/tweaks-panel.jsx": {
+    "mtime": 1777636650.5014093,
+    "ast_hash": "",
+    "semantic_hash": ""
+  },
+  "/Users/adityarajkashyap/Desktop/work/executive-mentor/components/firstyear/Diagnostic.tsx": {
+    "mtime": 1777631588.5620327,
+    "ast_hash": "",
+    "semantic_hash": ""
+  },
+  "/Users/adityarajkashyap/Desktop/work/executive-mentor/components/firstyear/ThirtyDayBrief.tsx": {
+    "mtime": 1777673478.9708931,
+    "ast_hash": "",
+    "semantic_hash": ""
+  },
+  "/Users/adityarajkashyap/Desktop/work/executive-mentor/components/firstyear/FirstYearScreen.tsx": {
+    "mtime": 1777675707.4611924,
+    "ast_hash": "",
+    "semantic_hash": ""
+  },
+  "/Users/adityarajkashyap/Desktop/work/executive-mentor/components/firstyear/CheckRow.tsx": {
+    "mtime": 1777631622.0969586,
+    "ast_hash": "",
+    "semantic_hash": ""
+  },
+  "/Users/adityarajkashyap/Desktop/work/executive-mentor/components/firstyear/DataBlock.tsx": {
+    "mtime": 1777631603.30524,
+    "ast_hash": "",
+    "semantic_hash": ""
+  },
+  "/Users/adityarajkashyap/Desktop/work/executive-mentor/components/firstyear/ArchetypeDeepDive.tsx": {
+    "mtime": 1777675653.0474288,
+    "ast_hash": "",
+    "semantic_hash": ""
+  },
+  "/Users/adityarajkashyap/Desktop/work/executive-mentor/components/firstyear/TalentStack.tsx": {
+    "mtime": 1777673453.7181184,
+    "ast_hash": "",
+    "semantic_hash": ""
+  },
+  "/Users/adityarajkashyap/Desktop/work/executive-mentor/components/firstyear/Cartography.tsx": {
+    "mtime": 1777674541.1190472,
+    "ast_hash": "",
+    "semantic_hash": ""
+  },
+  "/Users/adityarajkashyap/Desktop/work/executive-mentor/components/landing/PullQuote.tsx": {
+    "mtime": 1777631227.743919,
+    "ast_hash": "",
+    "semantic_hash": ""
+  },
+  "/Users/adityarajkashyap/Desktop/work/executive-mentor/components/landing/Hero.tsx": {
+    "mtime": 1777631248.1665018,
+    "ast_hash": "",
+    "semantic_hash": ""
+  },
+  "/Users/adityarajkashyap/Desktop/work/executive-mentor/components/landing/DemoTerminal.tsx": {
+    "mtime": 1777631201.3608775,
+    "ast_hash": "",
+    "semantic_hash": ""
+  },
+  "/Users/adityarajkashyap/Desktop/work/executive-mentor/components/landing/InvestorTicker.tsx": {
+    "mtime": 1777631239.2535992,
+    "ast_hash": "",
+    "semantic_hash": ""
+  },
+  "/Users/adityarajkashyap/Desktop/work/executive-mentor/components/landing/ClosingCTA.tsx": {
+    "mtime": 1777631233.8914363,
+    "ast_hash": "",
+    "semantic_hash": ""
+  },
+  "/Users/adityarajkashyap/Desktop/work/executive-mentor/components/landing/FeatureGrid.tsx": {
+    "mtime": 1777631221.5104318,
+    "ast_hash": "",
+    "semantic_hash": ""
+  },
+  "/Users/adityarajkashyap/Desktop/work/executive-mentor/components/landing/MetricsRibbon.tsx": {
+    "mtime": 1777631207.6967707,
+    "ast_hash": "",
+    "semantic_hash": ""
+  },
+  "/Users/adityarajkashyap/Desktop/work/executive-mentor/components/landing/Stat.tsx": {
+    "mtime": 1777631185.5974827,
+    "ast_hash": "",
+    "semantic_hash": ""
+  },
+  "/Users/adityarajkashyap/Desktop/work/executive-mentor/components/roadmap/RePlanModal.tsx": {
+    "mtime": 1777631541.7582698,
+    "ast_hash": "",
+    "semantic_hash": ""
+  },
+  "/Users/adityarajkashyap/Desktop/work/executive-mentor/components/roadmap/Card.tsx": {
+    "mtime": 1777631498.365016,
+    "ast_hash": "",
+    "semantic_hash": ""
+  },
+  "/Users/adityarajkashyap/Desktop/work/executive-mentor/components/roadmap/Timeline.tsx": {
+    "mtime": 1777631518.753289,
+    "ast_hash": "",
+    "semantic_hash": ""
+  },
+  "/Users/adityarajkashyap/Desktop/work/executive-mentor/components/roadmap/DetailPanel.tsx": {
+    "mtime": 1777631532.2085273,
+    "ast_hash": "",
+    "semantic_hash": ""
+  },
+  "/Users/adityarajkashyap/Desktop/work/executive-mentor/components/roadmap/StatusBadge.tsx": {
+    "mtime": 1777631490.345576,
+    "ast_hash": "",
+    "semantic_hash": ""
+  },
+  "/Users/adityarajkashyap/Desktop/work/executive-mentor/components/roadmap/RoadmapScreen.tsx": {
+    "mtime": 1777631567.464837,
+    "ast_hash": "",
+    "semantic_hash": ""
+  },
+  "/Users/adityarajkashyap/Desktop/work/executive-mentor/components/roadmap/AltCard.tsx": {
+    "mtime": 1777631504.5482342,
+    "ast_hash": "",
+    "semantic_hash": ""
+  },
+  "/Users/adityarajkashyap/Desktop/work/executive-mentor/components/shared/LogoMark.tsx": {
+    "mtime": 1777631146.8510802,
+    "ast_hash": "",
+    "semantic_hash": ""
+  },
+  "/Users/adityarajkashyap/Desktop/work/executive-mentor/components/shared/Icon.tsx": {
+    "mtime": 1777631143.776241,
+    "ast_hash": "",
+    "semantic_hash": ""
+  },
+  "/Users/adityarajkashyap/Desktop/work/executive-mentor/components/shared/ThemeBootstrap.tsx": {
+    "mtime": 1777631166.4268048,
+    "ast_hash": "",
+    "semantic_hash": ""
+  },
+  "/Users/adityarajkashyap/Desktop/work/executive-mentor/components/shared/Kicker.tsx": {
+    "mtime": 1777631148.9662383,
+    "ast_hash": "",
+    "semantic_hash": ""
+  },
+  "/Users/adityarajkashyap/Desktop/work/executive-mentor/components/shared/CTA.tsx": {
+    "mtime": 1777631157.6227171,
+    "ast_hash": "",
+    "semantic_hash": ""
+  },
+  "/Users/adityarajkashyap/Desktop/work/executive-mentor/components/shared/ModeToggle.tsx": {
+    "mtime": 1777631164.147261,
+    "ast_hash": "",
+    "semantic_hash": ""
+  },
+  "/Users/adityarajkashyap/Desktop/work/executive-mentor/components/shared/TopNav.tsx": {
+    "mtime": 1777669612.574336,
+    "ast_hash": "",
+    "semantic_hash": ""
+  },
+  "/Users/adityarajkashyap/Desktop/work/executive-mentor/components/dashboard/ReadinessBadge.tsx": {
+    "mtime": 1777631753.6000166,
+    "ast_hash": "",
+    "semantic_hash": ""
+  },
+  "/Users/adityarajkashyap/Desktop/work/executive-mentor/components/dashboard/MetricRibbon.tsx": {
+    "mtime": 1777631727.5019002,
+    "ast_hash": "",
+    "semantic_hash": ""
+  },
+  "/Users/adityarajkashyap/Desktop/work/executive-mentor/components/dashboard/PrivacyBanner.tsx": {
+    "mtime": 1777631714.7728627,
+    "ast_hash": "",
+    "semantic_hash": ""
+  },
+  "/Users/adityarajkashyap/Desktop/work/executive-mentor/components/dashboard/DashHeader.tsx": {
+    "mtime": 1777631721.361043,
+    "ast_hash": "",
+    "semantic_hash": ""
+  },
+  "/Users/adityarajkashyap/Desktop/work/executive-mentor/components/dashboard/CohortTable.tsx": {
+    "mtime": 1777631764.0457766,
+    "ast_hash": "",
+    "semantic_hash": ""
+  },
+  "/Users/adityarajkashyap/Desktop/work/executive-mentor/components/dashboard/NarrativePanel.tsx": {
+    "mtime": 1777631751.2846324,
+    "ast_hash": "",
+    "semantic_hash": ""
+  },
+  "/Users/adityarajkashyap/Desktop/work/executive-mentor/components/dashboard/Block.tsx": {
+    "mtime": 1777631779.0113149,
+    "ast_hash": "",
+    "semantic_hash": ""
+  },
+  "/Users/adityarajkashyap/Desktop/work/executive-mentor/components/dashboard/SkillHeatmap.tsx": {
+    "mtime": 1777631771.6566343,
+    "ast_hash": "",
+    "semantic_hash": ""
+  },
+  "/Users/adityarajkashyap/Desktop/work/executive-mentor/components/dashboard/DashboardScreen.tsx": {
+    "mtime": 1777631823.4022136,
+    "ast_hash": "",
+    "semantic_hash": ""
+  },
+  "/Users/adityarajkashyap/Desktop/work/executive-mentor/components/dashboard/TrajectoryChart.tsx": {
+    "mtime": 1777631742.9032416,
+    "ast_hash": "",
+    "semantic_hash": ""
+  },
+  "/Users/adityarajkashyap/Desktop/work/executive-mentor/components/dashboard/Stat.tsx": {
+    "mtime": 1777631775.790989,
+    "ast_hash": "",
+    "semantic_hash": ""
+  },
+  "/Users/adityarajkashyap/Desktop/work/executive-mentor/components/dashboard/DrilldownOverlay.tsx": {
+    "mtime": 1777631812.8055727,
+    "ast_hash": "",
+    "semantic_hash": ""
+  },
+  "/Users/adityarajkashyap/Desktop/work/executive-mentor/components/console/Suggestions.tsx": {
+    "mtime": 1777631373.1419923,
+    "ast_hash": "",
+    "semantic_hash": ""
+  },
+  "/Users/adityarajkashyap/Desktop/work/executive-mentor/components/console/ThinkingIndicator.tsx": {
+    "mtime": 1777631355.2390997,
+    "ast_hash": "",
+    "semantic_hash": ""
+  },
+  "/Users/adityarajkashyap/Desktop/work/executive-mentor/components/console/ContextChip.tsx": {
+    "mtime": 1777631342.0376723,
+    "ast_hash": "",
+    "semantic_hash": ""
+  },
+  "/Users/adityarajkashyap/Desktop/work/executive-mentor/components/console/Section.tsx": {
+    "mtime": 1777631338.9930172,
+    "ast_hash": "",
+    "semantic_hash": ""
+  },
+  "/Users/adityarajkashyap/Desktop/work/executive-mentor/components/console/ChatHeader.tsx": {
+    "mtime": 1777631381.741924,
+    "ast_hash": "",
+    "semantic_hash": ""
+  },
+  "/Users/adityarajkashyap/Desktop/work/executive-mentor/components/console/Dossier.tsx": {
+    "mtime": 1777631400.16204,
+    "ast_hash": "",
+    "semantic_hash": ""
+  },
+  "/Users/adityarajkashyap/Desktop/work/executive-mentor/components/console/ChatBubble.tsx": {
+    "mtime": 1777631351.4605196,
+    "ast_hash": "",
+    "semantic_hash": ""
+  },
+  "/Users/adityarajkashyap/Desktop/work/executive-mentor/components/console/ChatInput.tsx": {
+    "mtime": 1777631366.03372,
+    "ast_hash": "",
+    "semantic_hash": ""
+  },
+  "/Users/adityarajkashyap/Desktop/work/executive-mentor/components/console/ConsoleScreen.tsx": {
+    "mtime": 1777631482.6020513,
+    "ast_hash": "",
+    "semantic_hash": ""
+  },
+  "/Users/adityarajkashyap/Desktop/work/executive-mentor/components/console/OnboardingFlow.tsx": {
+    "mtime": 1777631444.3379116,
+    "ast_hash": "",
+    "semantic_hash": ""
+  },
+  "/Users/adityarajkashyap/Desktop/work/executive-mentor/lib/hooks/useThemeMode.ts": {
+    "mtime": 1777630870.0477448,
+    "ast_hash": "",
+    "semantic_hash": ""
+  },
+  "/Users/adityarajkashyap/Desktop/work/executive-mentor/test/project/Executive Mentor.html": {
+    "mtime": 1777636650.4874854,
+    "ast_hash": "",
+    "semantic_hash": ""
+  },
+  "/Users/adityarajkashyap/Desktop/executive-mentor/.claude/settings.json": {
+    "mtime": 1783743013.5355515,
+    "ast_hash": "9276b535256dc065bd7b8b84e15abd95",
+    "semantic_hash": "9276b535256dc065bd7b8b84e15abd95"
+  },
+  "/Users/adityarajkashyap/Desktop/executive-mentor/.claude/settings.local.json": {
+    "mtime": 1783752591.9214535,
+    "ast_hash": "6b48a009825962ed24889ecb07ae7c10",
+    "semantic_hash": "6b48a009825962ed24889ecb07ae7c10"
+  },
+  "/Users/adityarajkashyap/Desktop/executive-mentor/app/api/assessment/extract/route.ts": {
+    "mtime": 1783745217.1218815,
+    "ast_hash": "2c3e93d2c090f5bc96b66d880d72cb8e",
+    "semantic_hash": "2c3e93d2c090f5bc96b66d880d72cb8e"
+  },
+  "/Users/adityarajkashyap/Desktop/executive-mentor/app/api/console/chat/route.ts": {
+    "mtime": 1783743013.536601,
+    "ast_hash": "ffffad7bb43823c485c708e337e66b91",
+    "semantic_hash": "ffffad7bb43823c485c708e337e66b91"
+  },
+  "/Users/adityarajkashyap/Desktop/executive-mentor/app/api/firstyear/generate/route.ts": {
+    "mtime": 1783743013.5370173,
+    "ast_hash": "be66c8734ed34d0891107e0495eab493",
+    "semantic_hash": "be66c8734ed34d0891107e0495eab493"
+  },
+  "/Users/adityarajkashyap/Desktop/executive-mentor/app/api/roadmap/generate/route.ts": {
+    "mtime": 1783743013.5376072,
+    "ast_hash": "378cb93385b0f979d1e5a7321c4c10d9",
+    "semantic_hash": "378cb93385b0f979d1e5a7321c4c10d9"
+  },
+  "/Users/adityarajkashyap/Desktop/executive-mentor/app/console/page.tsx": {
+    "mtime": 1783743013.5378323,
+    "ast_hash": "dd71f1eb55a6f158817c3d1d576d735d",
+    "semantic_hash": "dd71f1eb55a6f158817c3d1d576d735d"
+  },
+  "/Users/adityarajkashyap/Desktop/executive-mentor/app/dashboard/page.tsx": {
+    "mtime": 1783743013.5380278,
+    "ast_hash": "aa572765c01b99ee98bb42e4aed42ba0",
+    "semantic_hash": "aa572765c01b99ee98bb42e4aed42ba0"
+  },
+  "/Users/adityarajkashyap/Desktop/executive-mentor/app/first-year/assessment/page.tsx": {
+    "mtime": 1783745349.8149383,
+    "ast_hash": "5ec26c382897153763fbd0f67bac1bb4",
+    "semantic_hash": "5ec26c382897153763fbd0f67bac1bb4"
+  },
+  "/Users/adityarajkashyap/Desktop/executive-mentor/app/first-year/page.tsx": {
+    "mtime": 1783743013.538459,
+    "ast_hash": "0373e1bbfdaef8403c9149edb9d883a1",
+    "semantic_hash": "0373e1bbfdaef8403c9149edb9d883a1"
+  },
+  "/Users/adityarajkashyap/Desktop/executive-mentor/app/layout.tsx": {
+    "mtime": 1783743013.5388048,
+    "ast_hash": "e3173ae5c8bf6e4f9785d43a38023ceb",
+    "semantic_hash": "e3173ae5c8bf6e4f9785d43a38023ceb"
+  },
+  "/Users/adityarajkashyap/Desktop/executive-mentor/app/page.tsx": {
+    "mtime": 1783743013.5389488,
+    "ast_hash": "daa00a42002684e556f1244695d682dd",
+    "semantic_hash": "daa00a42002684e556f1244695d682dd"
+  },
+  "/Users/adityarajkashyap/Desktop/executive-mentor/app/roadmap/page.tsx": {
+    "mtime": 1783743013.5391529,
+    "ast_hash": "218b85c91e6c578ec8ab52a6f90a7ae3",
+    "semantic_hash": "218b85c91e6c578ec8ab52a6f90a7ae3"
+  },
+  "/Users/adityarajkashyap/Desktop/executive-mentor/components/assessment/AssessmentScreen.tsx": {
+    "mtime": 1783745467.3183713,
+    "ast_hash": "6f75983931288c171140669d9d85de54",
+    "semantic_hash": "6f75983931288c171140669d9d85de54"
+  },
+  "/Users/adityarajkashyap/Desktop/executive-mentor/components/assessment/ChatOnboarding.tsx": {
+    "mtime": 1783745237.8852487,
+    "ast_hash": "d12bebc76152159e6ba7171c8b57355c",
+    "semantic_hash": "d12bebc76152159e6ba7171c8b57355c"
+  },
+  "/Users/adityarajkashyap/Desktop/executive-mentor/components/assessment/ModuleRunner.tsx": {
+    "mtime": 1783745487.8023045,
+    "ast_hash": "a65d3318cee7dcfcbc4fdb160df18508",
+    "semantic_hash": "a65d3318cee7dcfcbc4fdb160df18508"
+  },
+  "/Users/adityarajkashyap/Desktop/executive-mentor/components/assessment/ResultsDashboard.tsx": {
+    "mtime": 1783745307.3935463,
+    "ast_hash": "4594d0daf6bad0850a7919d576a971c0",
+    "semantic_hash": "4594d0daf6bad0850a7919d576a971c0"
+  },
+  "/Users/adityarajkashyap/Desktop/executive-mentor/components/console/ChatBubble.tsx": {
+    "mtime": 1783743013.5394647,
+    "ast_hash": "2d45004789139fa4e0d09ad1e5dc9c63",
+    "semantic_hash": "2d45004789139fa4e0d09ad1e5dc9c63"
+  },
+  "/Users/adityarajkashyap/Desktop/executive-mentor/components/console/ChatHeader.tsx": {
+    "mtime": 1783743013.5395997,
+    "ast_hash": "131e9d7dd933611481e8e7677930993c",
+    "semantic_hash": "131e9d7dd933611481e8e7677930993c"
+  },
+  "/Users/adityarajkashyap/Desktop/executive-mentor/components/console/ChatInput.tsx": {
+    "mtime": 1783743013.5397286,
+    "ast_hash": "acf57da87efea2a592b7f04bec6c35d2",
+    "semantic_hash": "acf57da87efea2a592b7f04bec6c35d2"
+  },
+  "/Users/adityarajkashyap/Desktop/executive-mentor/components/console/ConsoleScreen.tsx": {
+    "mtime": 1783743013.5399878,
+    "ast_hash": "2a53ffb24897de89e85c3e0c7cb8a52c",
+    "semantic_hash": "2a53ffb24897de89e85c3e0c7cb8a52c"
+  },
+  "/Users/adityarajkashyap/Desktop/executive-mentor/components/console/ContextChip.tsx": {
+    "mtime": 1783743013.5401082,
+    "ast_hash": "fbdf4265ddce8d82d3023f3f2be81a66",
+    "semantic_hash": "fbdf4265ddce8d82d3023f3f2be81a66"
+  },
+  "/Users/adityarajkashyap/Desktop/executive-mentor/components/console/Dossier.tsx": {
+    "mtime": 1783743013.5403016,
+    "ast_hash": "a45278e1929d2601eece98f19cf2fb48",
+    "semantic_hash": "a45278e1929d2601eece98f19cf2fb48"
+  },
+  "/Users/adityarajkashyap/Desktop/executive-mentor/components/console/OnboardingFlow.tsx": {
+    "mtime": 1783743013.5405767,
+    "ast_hash": "13058ecda087cbc9c21ee6044534cd63",
+    "semantic_hash": "13058ecda087cbc9c21ee6044534cd63"
+  },
+  "/Users/adityarajkashyap/Desktop/executive-mentor/components/console/Section.tsx": {
+    "mtime": 1783743013.5407202,
+    "ast_hash": "d178b48e21bc3aa6e9c372a2e91db037",
+    "semantic_hash": "d178b48e21bc3aa6e9c372a2e91db037"
+  },
+  "/Users/adityarajkashyap/Desktop/executive-mentor/components/console/Suggestions.tsx": {
+    "mtime": 1783743013.5408506,
+    "ast_hash": "8fadff2c043b82a7d55dd8dbb5c73084",
+    "semantic_hash": "8fadff2c043b82a7d55dd8dbb5c73084"
+  },
+  "/Users/adityarajkashyap/Desktop/executive-mentor/components/console/ThinkingIndicator.tsx": {
+    "mtime": 1783743013.540974,
+    "ast_hash": "478673fa0dc833cf75571ad80e143f25",
+    "semantic_hash": "478673fa0dc833cf75571ad80e143f25"
+  },
+  "/Users/adityarajkashyap/Desktop/executive-mentor/components/dashboard/Block.tsx": {
+    "mtime": 1783743013.5411608,
+    "ast_hash": "c732f7603d6b2a505082d32bdadc2448",
+    "semantic_hash": "c732f7603d6b2a505082d32bdadc2448"
+  },
+  "/Users/adityarajkashyap/Desktop/executive-mentor/components/dashboard/CohortTable.tsx": {
+    "mtime": 1783743013.5412865,
+    "ast_hash": "f18edacd189abaa9fe026da9df17f12e",
+    "semantic_hash": "f18edacd189abaa9fe026da9df17f12e"
+  },
+  "/Users/adityarajkashyap/Desktop/executive-mentor/components/dashboard/DashHeader.tsx": {
+    "mtime": 1783743013.5413995,
+    "ast_hash": "133c734408f91788ceb0a57340a9ab2c",
+    "semantic_hash": "133c734408f91788ceb0a57340a9ab2c"
+  },
+  "/Users/adityarajkashyap/Desktop/executive-mentor/components/dashboard/DashboardScreen.tsx": {
+    "mtime": 1783743013.5415165,
+    "ast_hash": "a1f156c0d67d34877891b4aa5c2bfd6f",
+    "semantic_hash": "a1f156c0d67d34877891b4aa5c2bfd6f"
+  },
+  "/Users/adityarajkashyap/Desktop/executive-mentor/components/dashboard/DrilldownOverlay.tsx": {
+    "mtime": 1783743013.5417237,
+    "ast_hash": "14dee3e2533fd23c9695be02c70e37ed",
+    "semantic_hash": "14dee3e2533fd23c9695be02c70e37ed"
+  },
+  "/Users/adityarajkashyap/Desktop/executive-mentor/components/dashboard/MetricRibbon.tsx": {
+    "mtime": 1783743013.5418394,
+    "ast_hash": "2e6b37ef99547dad698dc70cd6753d06",
+    "semantic_hash": "2e6b37ef99547dad698dc70cd6753d06"
+  },
+  "/Users/adityarajkashyap/Desktop/executive-mentor/components/dashboard/NarrativePanel.tsx": {
+    "mtime": 1783743013.5419493,
+    "ast_hash": "66b9fa5191b26ba32da40b164f0bf12e",
+    "semantic_hash": "66b9fa5191b26ba32da40b164f0bf12e"
+  },
+  "/Users/adityarajkashyap/Desktop/executive-mentor/components/dashboard/PrivacyBanner.tsx": {
+    "mtime": 1783743013.5420635,
+    "ast_hash": "d48dbebf116481753c05612697e31876",
+    "semantic_hash": "d48dbebf116481753c05612697e31876"
+  },
+  "/Users/adityarajkashyap/Desktop/executive-mentor/components/dashboard/ReadinessBadge.tsx": {
+    "mtime": 1783743013.5421746,
+    "ast_hash": "6a5afab0ecc093327d0ae0f3359a0f23",
+    "semantic_hash": "6a5afab0ecc093327d0ae0f3359a0f23"
+  },
+  "/Users/adityarajkashyap/Desktop/executive-mentor/components/dashboard/SkillHeatmap.tsx": {
+    "mtime": 1783743013.542284,
+    "ast_hash": "71986c12da4e8c7d53e87b5652bea993",
+    "semantic_hash": "71986c12da4e8c7d53e87b5652bea993"
+  },
+  "/Users/adityarajkashyap/Desktop/executive-mentor/components/dashboard/Stat.tsx": {
+    "mtime": 1783743013.5424056,
+    "ast_hash": "f70b32f1847197d105ee4851a33b43f8",
+    "semantic_hash": "f70b32f1847197d105ee4851a33b43f8"
+  },
+  "/Users/adityarajkashyap/Desktop/executive-mentor/components/dashboard/TrajectoryChart.tsx": {
+    "mtime": 1783743013.5425313,
+    "ast_hash": "b2ae887bbdbf3888843855be8bd003d2",
+    "semantic_hash": "b2ae887bbdbf3888843855be8bd003d2"
+  },
+  "/Users/adityarajkashyap/Desktop/executive-mentor/components/firstyear/ArchetypeDeepDive.tsx": {
+    "mtime": 1783743013.5429711,
+    "ast_hash": "56039ba8a409a876ee0ae1f00f2cd44c",
+    "semantic_hash": "56039ba8a409a876ee0ae1f00f2cd44c"
+  },
+  "/Users/adityarajkashyap/Desktop/executive-mentor/components/firstyear/Cartography.tsx": {
+    "mtime": 1783743013.5433173,
+    "ast_hash": "80dad2698fcdabb525a1a52bccc0330b",
+    "semantic_hash": "80dad2698fcdabb525a1a52bccc0330b"
+  },
+  "/Users/adityarajkashyap/Desktop/executive-mentor/components/firstyear/CheckRow.tsx": {
+    "mtime": 1783743013.5434318,
+    "ast_hash": "a9997b9c393ee36e936fd3a8c9eb2e28",
+    "semantic_hash": "a9997b9c393ee36e936fd3a8c9eb2e28"
+  },
+  "/Users/adityarajkashyap/Desktop/executive-mentor/components/firstyear/DataBlock.tsx": {
+    "mtime": 1783743013.5435402,
+    "ast_hash": "88380e94daadfcc81a69afe78ee9fa2e",
+    "semantic_hash": "88380e94daadfcc81a69afe78ee9fa2e"
+  },
+  "/Users/adityarajkashyap/Desktop/executive-mentor/components/firstyear/Diagnostic.tsx": {
+    "mtime": 1783743013.5437117,
+    "ast_hash": "11db365a166d7bbd5ad337caaa388bb7",
+    "semantic_hash": "11db365a166d7bbd5ad337caaa388bb7"
+  },
+  "/Users/adityarajkashyap/Desktop/executive-mentor/components/firstyear/FirstYearScreen.tsx": {
+    "mtime": 1783745415.984322,
+    "ast_hash": "69df1ff5c055c14d606adf24171a47bf",
+    "semantic_hash": "69df1ff5c055c14d606adf24171a47bf"
+  },
+  "/Users/adityarajkashyap/Desktop/executive-mentor/components/firstyear/TalentStack.tsx": {
+    "mtime": 1783743013.544234,
+    "ast_hash": "f142730cc6f8f26d1946fb7cf0e36ce4",
+    "semantic_hash": "f142730cc6f8f26d1946fb7cf0e36ce4"
+  },
+  "/Users/adityarajkashyap/Desktop/executive-mentor/components/firstyear/ThirtyDayBrief.tsx": {
+    "mtime": 1783743013.5444956,
+    "ast_hash": "87664aeca851bb53cf5943510b4b8283",
+    "semantic_hash": "87664aeca851bb53cf5943510b4b8283"
+  },
+  "/Users/adityarajkashyap/Desktop/executive-mentor/components/landing/ClosingCTA.tsx": {
+    "mtime": 1783743013.5446763,
+    "ast_hash": "12c5144b8c91ac31cd37721dd451ce18",
+    "semantic_hash": "12c5144b8c91ac31cd37721dd451ce18"
+  },
+  "/Users/adityarajkashyap/Desktop/executive-mentor/components/landing/DemoTerminal.tsx": {
+    "mtime": 1783743013.544774,
+    "ast_hash": "b15a4c20249281a7836f22524687d32a",
+    "semantic_hash": "b15a4c20249281a7836f22524687d32a"
+  },
+  "/Users/adityarajkashyap/Desktop/executive-mentor/components/landing/FeatureGrid.tsx": {
+    "mtime": 1783743013.5448916,
+    "ast_hash": "fe60172d85838ea27eba1510423ffeb1",
+    "semantic_hash": "fe60172d85838ea27eba1510423ffeb1"
+  },
+  "/Users/adityarajkashyap/Desktop/executive-mentor/components/landing/Hero.tsx": {
+    "mtime": 1783743013.5450122,
+    "ast_hash": "59eeabc6be4caf6e2e8a869de1fa486d",
+    "semantic_hash": "59eeabc6be4caf6e2e8a869de1fa486d"
+  },
+  "/Users/adityarajkashyap/Desktop/executive-mentor/components/landing/InvestorTicker.tsx": {
+    "mtime": 1783743013.545251,
+    "ast_hash": "1b6644cc6e796ef374344e7e4587f913",
+    "semantic_hash": "1b6644cc6e796ef374344e7e4587f913"
+  },
+  "/Users/adityarajkashyap/Desktop/executive-mentor/components/landing/MetricsRibbon.tsx": {
+    "mtime": 1783743013.5453649,
+    "ast_hash": "595d30154a693d34e25e48f7a43df178",
+    "semantic_hash": "595d30154a693d34e25e48f7a43df178"
+  },
+  "/Users/adityarajkashyap/Desktop/executive-mentor/components/landing/PullQuote.tsx": {
+    "mtime": 1783743013.5454717,
+    "ast_hash": "e77fe82b180c47e38366d27eaefb572f",
+    "semantic_hash": "e77fe82b180c47e38366d27eaefb572f"
+  },
+  "/Users/adityarajkashyap/Desktop/executive-mentor/components/landing/Stat.tsx": {
+    "mtime": 1783743013.5455759,
+    "ast_hash": "01f10730d136ee30e3c4fccc60a99ae0",
+    "semantic_hash": "01f10730d136ee30e3c4fccc60a99ae0"
+  },
+  "/Users/adityarajkashyap/Desktop/executive-mentor/components/roadmap/AltCard.tsx": {
+    "mtime": 1783743013.5457494,
+    "ast_hash": "6bacd705d34ce60ed51fefd5c88e143b",
+    "semantic_hash": "6bacd705d34ce60ed51fefd5c88e143b"
+  },
+  "/Users/adityarajkashyap/Desktop/executive-mentor/components/roadmap/Card.tsx": {
+    "mtime": 1783743013.5458796,
+    "ast_hash": "9524e6b2892da8b99dd0c06b2e6ab7d0",
+    "semantic_hash": "9524e6b2892da8b99dd0c06b2e6ab7d0"
+  },
+  "/Users/adityarajkashyap/Desktop/executive-mentor/components/roadmap/DetailPanel.tsx": {
+    "mtime": 1783743013.5460577,
+    "ast_hash": "6f1e724fdefd2c186d6d7e5021ebed59",
+    "semantic_hash": "6f1e724fdefd2c186d6d7e5021ebed59"
+  },
+  "/Users/adityarajkashyap/Desktop/executive-mentor/components/roadmap/RePlanModal.tsx": {
+    "mtime": 1783743013.5461767,
+    "ast_hash": "11a951cfe700c3994d555f2dbe3a4666",
+    "semantic_hash": "11a951cfe700c3994d555f2dbe3a4666"
+  },
+  "/Users/adityarajkashyap/Desktop/executive-mentor/components/roadmap/RoadmapScreen.tsx": {
+    "mtime": 1783743013.5464299,
+    "ast_hash": "39369200325c5432be34a3844c82f707",
+    "semantic_hash": "39369200325c5432be34a3844c82f707"
+  },
+  "/Users/adityarajkashyap/Desktop/executive-mentor/components/roadmap/StatusBadge.tsx": {
+    "mtime": 1783743013.5465379,
+    "ast_hash": "2bef92d4124d9956259be569c0c236ca",
+    "semantic_hash": "2bef92d4124d9956259be569c0c236ca"
+  },
+  "/Users/adityarajkashyap/Desktop/executive-mentor/components/roadmap/Timeline.tsx": {
+    "mtime": 1783743013.546652,
+    "ast_hash": "c301d3e798e66b455910fb022cf9686a",
+    "semantic_hash": "c301d3e798e66b455910fb022cf9686a"
+  },
+  "/Users/adityarajkashyap/Desktop/executive-mentor/components/shared/CTA.tsx": {
+    "mtime": 1783743013.5468338,
+    "ast_hash": "5216425cc3a25bb81ab6891fa4d88da1",
+    "semantic_hash": "5216425cc3a25bb81ab6891fa4d88da1"
+  },
+  "/Users/adityarajkashyap/Desktop/executive-mentor/components/shared/Icon.tsx": {
+    "mtime": 1783743013.5469575,
+    "ast_hash": "6d1efc8c309d691283ddd77a82ae58ae",
+    "semantic_hash": "6d1efc8c309d691283ddd77a82ae58ae"
+  },
+  "/Users/adityarajkashyap/Desktop/executive-mentor/components/shared/Kicker.tsx": {
+    "mtime": 1783743013.547079,
+    "ast_hash": "34ad3cb50f426061d215b72777e8e934",
+    "semantic_hash": "34ad3cb50f426061d215b72777e8e934"
+  },
+  "/Users/adityarajkashyap/Desktop/executive-mentor/components/shared/LogoMark.tsx": {
+    "mtime": 1783743013.5471985,
+    "ast_hash": "fe936a3c82f313430be5a0fe2fac356f",
+    "semantic_hash": "fe936a3c82f313430be5a0fe2fac356f"
+  },
+  "/Users/adityarajkashyap/Desktop/executive-mentor/components/shared/ModeToggle.tsx": {
+    "mtime": 1783743013.547327,
+    "ast_hash": "74b373b05dc74f974290b54c54b46a20",
+    "semantic_hash": "74b373b05dc74f974290b54c54b46a20"
+  },
+  "/Users/adityarajkashyap/Desktop/executive-mentor/components/shared/ThemeBootstrap.tsx": {
+    "mtime": 1783743013.5474534,
+    "ast_hash": "85de160819a9ff54713c3c5bb04dae90",
+    "semantic_hash": "85de160819a9ff54713c3c5bb04dae90"
+  },
+  "/Users/adityarajkashyap/Desktop/executive-mentor/components/shared/TopNav.tsx": {
+    "mtime": 1783743013.547792,
+    "ast_hash": "598b27ac68a8b18d1ac51cf316520c51",
+    "semantic_hash": "598b27ac68a8b18d1ac51cf316520c51"
+  },
+  "/Users/adityarajkashyap/Desktop/executive-mentor/data/archetypes.ts": {
+    "mtime": 1783743013.5480769,
+    "ast_hash": "88909a37700f89f05815e48e06033408",
+    "semantic_hash": "88909a37700f89f05815e48e06033408"
+  },
+  "/Users/adityarajkashyap/Desktop/executive-mentor/data/cohort.ts": {
+    "mtime": 1783743013.5483391,
+    "ast_hash": "f4c2697a0f3e60e5e9aedc2b21178368",
+    "semantic_hash": "f4c2697a0f3e60e5e9aedc2b21178368"
+  },
+  "/Users/adityarajkashyap/Desktop/executive-mentor/data/dossier.ts": {
+    "mtime": 1783743013.5484724,
+    "ast_hash": "8135d1a130342f7e66097cb5f098d560",
+    "semantic_hash": "8135d1a130342f7e66097cb5f098d560"
+  },
+  "/Users/adityarajkashyap/Desktop/executive-mentor/data/milestones.ts": {
+    "mtime": 1783743013.548605,
+    "ast_hash": "6448d1d926718ee00a7d2d05f6a8950e",
+    "semantic_hash": "6448d1d926718ee00a7d2d05f6a8950e"
+  },
+  "/Users/adityarajkashyap/Desktop/executive-mentor/data/ticker.ts": {
+    "mtime": 1783743013.5488658,
+    "ast_hash": "4179b8ae36e765649f6f7ac309a18c31",
+    "semantic_hash": "4179b8ae36e765649f6f7ac309a18c31"
+  },
+  "/Users/adityarajkashyap/Desktop/executive-mentor/eslint.config.mjs": {
+    "mtime": 1783743013.5489883,
+    "ast_hash": "dfa1f5f6a7037bf39dc510f30b180002",
+    "semantic_hash": "dfa1f5f6a7037bf39dc510f30b180002"
+  },
+  "/Users/adityarajkashyap/Desktop/executive-mentor/lib/assessmentScoring.ts": {
+    "mtime": 1783745198.088429,
+    "ast_hash": "53a3b9607bbde13bd09a9758d2b489ea",
+    "semantic_hash": "53a3b9607bbde13bd09a9758d2b489ea"
+  },
+  "/Users/adityarajkashyap/Desktop/executive-mentor/lib/hooks/useThemeMode.ts": {
+    "mtime": 1783743013.583322,
+    "ast_hash": "7b7299cbb431ea94370f0f22998a1d54",
+    "semantic_hash": "7b7299cbb431ea94370f0f22998a1d54"
+  },
+  "/Users/adityarajkashyap/Desktop/executive-mentor/lib/mockAI.ts": {
+    "mtime": 1783743013.5834463,
+    "ast_hash": "220bd9ce056a7da0136353c6d144fe20",
+    "semantic_hash": "220bd9ce056a7da0136353c6d144fe20"
+  },
+  "/Users/adityarajkashyap/Desktop/executive-mentor/lib/storage.ts": {
+    "mtime": 1783743013.583604,
+    "ast_hash": "a3a18e02853081d1aa9f2dd33338e67f",
+    "semantic_hash": "a3a18e02853081d1aa9f2dd33338e67f"
+  },
+  "/Users/adityarajkashyap/Desktop/executive-mentor/lib/voice.ts": {
+    "mtime": 1783743013.5836816,
+    "ast_hash": "f00f8560b9ee81435e71f33f907e0b1b",
+    "semantic_hash": "f00f8560b9ee81435e71f33f907e0b1b"
+  },
+  "/Users/adityarajkashyap/Desktop/executive-mentor/next.config.ts": {
+    "mtime": 1783743013.5838957,
+    "ast_hash": "9b77af189a21a7a64e4bd7a426f64176",
+    "semantic_hash": "9b77af189a21a7a64e4bd7a426f64176"
+  },
+  "/Users/adityarajkashyap/Desktop/executive-mentor/package.json": {
+    "mtime": 1783743013.5844398,
+    "ast_hash": "bec562fdda4cb17a03156c2432a78f2f",
+    "semantic_hash": "bec562fdda4cb17a03156c2432a78f2f"
+  },
+  "/Users/adityarajkashyap/Desktop/executive-mentor/postcss.config.mjs": {
+    "mtime": 1783743013.5847404,
+    "ast_hash": "239f3ebf717465dc636818a1a619398d",
+    "semantic_hash": "239f3ebf717465dc636818a1a619398d"
+  },
+  "/Users/adityarajkashyap/Desktop/executive-mentor/proxy.ts": {
+    "mtime": 1783743013.5848117,
+    "ast_hash": "40b28b0ae269a260d9461636b09a8282",
+    "semantic_hash": "40b28b0ae269a260d9461636b09a8282"
+  },
+  "/Users/adityarajkashyap/Desktop/executive-mentor/test/project/export/src/src/app.jsx": {
+    "mtime": 1783743013.5931575,
+    "ast_hash": "7cbdc3080df2ab7cc9ebbae75a1e063a",
+    "semantic_hash": "7cbdc3080df2ab7cc9ebbae75a1e063a"
+  },
+  "/Users/adityarajkashyap/Desktop/executive-mentor/test/project/export/src/src/console.jsx": {
+    "mtime": 1783743013.5932622,
+    "ast_hash": "43b30dd7c1d0b164d93bb711134f7191",
+    "semantic_hash": "43b30dd7c1d0b164d93bb711134f7191"
+  },
+  "/Users/adityarajkashyap/Desktop/executive-mentor/test/project/export/src/src/dashboard.jsx": {
+    "mtime": 1783743013.5933828,
+    "ast_hash": "5aab6460381dd9b2ff7defa6c41d0841",
+    "semantic_hash": "5aab6460381dd9b2ff7defa6c41d0841"
+  },
+  "/Users/adityarajkashyap/Desktop/executive-mentor/test/project/export/src/src/firstyear.jsx": {
+    "mtime": 1783743013.593539,
+    "ast_hash": "865382278786313762832da162c46fe1",
+    "semantic_hash": "865382278786313762832da162c46fe1"
+  },
+  "/Users/adityarajkashyap/Desktop/executive-mentor/test/project/export/src/src/landing.jsx": {
+    "mtime": 1783743013.593714,
+    "ast_hash": "df87f3635d1489612f51e22963f45aeb",
+    "semantic_hash": "df87f3635d1489612f51e22963f45aeb"
+  },
+  "/Users/adityarajkashyap/Desktop/executive-mentor/test/project/export/src/src/roadmap.jsx": {
+    "mtime": 1783743013.5938022,
+    "ast_hash": "287a185661326c249ac96a9c026be445",
+    "semantic_hash": "287a185661326c249ac96a9c026be445"
+  },
+  "/Users/adityarajkashyap/Desktop/executive-mentor/test/project/export/src/src/shared.jsx": {
+    "mtime": 1783743013.5939488,
+    "ast_hash": "6719e38e390add3fca875b98a7d5b107",
+    "semantic_hash": "6719e38e390add3fca875b98a7d5b107"
+  },
+  "/Users/adityarajkashyap/Desktop/executive-mentor/test/project/export/src/src/themes.jsx": {
+    "mtime": 1783743013.594075,
+    "ast_hash": "c01378800d16dd42e3e546b6cbf4a764",
+    "semantic_hash": "c01378800d16dd42e3e546b6cbf4a764"
+  },
+  "/Users/adityarajkashyap/Desktop/executive-mentor/test/project/export/src/tweaks-panel.jsx": {
+    "mtime": 1783743013.5941684,
+    "ast_hash": "479584ad82d0eafbffe33b90f3e1db76",
+    "semantic_hash": "479584ad82d0eafbffe33b90f3e1db76"
+  },
+  "/Users/adityarajkashyap/Desktop/executive-mentor/test/project/src/app.jsx": {
+    "mtime": 1783743013.5943482,
+    "ast_hash": "7cbdc3080df2ab7cc9ebbae75a1e063a",
+    "semantic_hash": "7cbdc3080df2ab7cc9ebbae75a1e063a"
+  },
+  "/Users/adityarajkashyap/Desktop/executive-mentor/test/project/src/console.jsx": {
+    "mtime": 1783743013.5944464,
+    "ast_hash": "43b30dd7c1d0b164d93bb711134f7191",
+    "semantic_hash": "43b30dd7c1d0b164d93bb711134f7191"
+  },
+  "/Users/adityarajkashyap/Desktop/executive-mentor/test/project/src/dashboard.jsx": {
+    "mtime": 1783743013.5945537,
+    "ast_hash": "5aab6460381dd9b2ff7defa6c41d0841",
+    "semantic_hash": "5aab6460381dd9b2ff7defa6c41d0841"
+  },
+  "/Users/adityarajkashyap/Desktop/executive-mentor/test/project/src/firstyear.jsx": {
+    "mtime": 1783743013.5946882,
+    "ast_hash": "865382278786313762832da162c46fe1",
+    "semantic_hash": "865382278786313762832da162c46fe1"
+  },
+  "/Users/adityarajkashyap/Desktop/executive-mentor/test/project/src/landing.jsx": {
+    "mtime": 1783743013.5948339,
+    "ast_hash": "df87f3635d1489612f51e22963f45aeb",
+    "semantic_hash": "df87f3635d1489612f51e22963f45aeb"
+  },
+  "/Users/adityarajkashyap/Desktop/executive-mentor/test/project/src/roadmap.jsx": {
+    "mtime": 1783743013.5949194,
+    "ast_hash": "287a185661326c249ac96a9c026be445",
+    "semantic_hash": "287a185661326c249ac96a9c026be445"
+  },
+  "/Users/adityarajkashyap/Desktop/executive-mentor/test/project/src/shared.jsx": {
+    "mtime": 1783743013.5950541,
+    "ast_hash": "6719e38e390add3fca875b98a7d5b107",
+    "semantic_hash": "6719e38e390add3fca875b98a7d5b107"
+  },
+  "/Users/adityarajkashyap/Desktop/executive-mentor/test/project/src/themes.jsx": {
+    "mtime": 1783743013.5951798,
+    "ast_hash": "c01378800d16dd42e3e546b6cbf4a764",
+    "semantic_hash": "c01378800d16dd42e3e546b6cbf4a764"
+  },
+  "/Users/adityarajkashyap/Desktop/executive-mentor/test/project/tweaks-panel.jsx": {
+    "mtime": 1783743013.595269,
+    "ast_hash": "479584ad82d0eafbffe33b90f3e1db76",
+    "semantic_hash": "479584ad82d0eafbffe33b90f3e1db76"
+  },
+  "/Users/adityarajkashyap/Desktop/executive-mentor/tsconfig.json": {
+    "mtime": 1783743013.5956495,
+    "ast_hash": "a8566f2f8d603f62f4a2747eddfb69a4",
+    "semantic_hash": "a8566f2f8d603f62f4a2747eddfb69a4"
+  },
+  "/Users/adityarajkashyap/Desktop/executive-mentor/types/index.ts": {
+    "mtime": 1783743013.5958784,
+    "ast_hash": "b843c9ae7de9fcfc410dfe5dae492fb3",
+    "semantic_hash": "b843c9ae7de9fcfc410dfe5dae492fb3"
+  },
+  "/Users/adityarajkashyap/Desktop/executive-mentor/AGENTS.md": {
+    "mtime": 1783743013.5358624,
+    "ast_hash": "9e09241799026ac05be315a2f0b50055",
+    "semantic_hash": "9e09241799026ac05be315a2f0b50055"
+  },
+  "/Users/adityarajkashyap/Desktop/executive-mentor/CLAUDE.md": {
+    "mtime": 1783743013.535992,
+    "ast_hash": "c952fc3eda6be484d4db5babe9826e85",
+    "semantic_hash": "c952fc3eda6be484d4db5babe9826e85"
+  },
+  "/Users/adityarajkashyap/Desktop/executive-mentor/README.md": {
+    "mtime": 1783743013.5361311,
+    "ast_hash": "f15aaa42d5d299d091b1171097ea56ad",
+    "semantic_hash": "f15aaa42d5d299d091b1171097ea56ad"
+  },
+  "/Users/adityarajkashyap/Desktop/executive-mentor/test/README.md": {
+    "mtime": 1783743013.5860796,
+    "ast_hash": "bad074a1ff9d5e7e9991bb0262706e72",
+    "semantic_hash": "bad074a1ff9d5e7e9991bb0262706e72"
+  },
+  "/Users/adityarajkashyap/Desktop/executive-mentor/test/project/Executive Mentor.html": {
+    "mtime": 1783743013.5865223,
+    "ast_hash": "d537b0ca64ed12cf29aa683287fd15e0",
+    "semantic_hash": "d537b0ca64ed12cf29aa683287fd15e0"
+  },
+  "/Users/adityarajkashyap/Desktop/executive-mentor/test/project/export/Executive Mentor.html": {
+    "mtime": 1783743013.5923815,
+    "ast_hash": "c5543f33171ffb91d06dd3b20940e83c",
+    "semantic_hash": "c5543f33171ffb91d06dd3b20940e83c"
+  },
+  "/Users/adityarajkashyap/Desktop/executive-mentor/test/project/export/src/Executive Mentor.html": {
+    "mtime": 1783743013.5928755,
+    "ast_hash": "77efb03d2e8056e467c13f6a03ca2c68",
+    "semantic_hash": "77efb03d2e8056e467c13f6a03ca2c68"
+  },
+  "/Users/adityarajkashyap/Desktop/executive-mentor/test/project/uploads/design.md": {
+    "mtime": 1783743013.5954466,
+    "ast_hash": "1bac5825dbb5cee8d9fdc31ffdeeb52d",
+    "semantic_hash": "1bac5825dbb5cee8d9fdc31ffdeeb52d"
+  },
+  "/Users/adityarajkashyap/Desktop/executive-mentor/public/file.svg": {
+    "mtime": 1783743013.584917,
+    "ast_hash": "d09f95206c3fa0bb9bd9fefabfd0ea71",
+    "semantic_hash": "d09f95206c3fa0bb9bd9fefabfd0ea71"
+  },
+  "/Users/adityarajkashyap/Desktop/executive-mentor/public/globe.svg": {
+    "mtime": 1783743013.5854654,
+    "ast_hash": "2aaafa6a49b6563925fe440891e32717",
+    "semantic_hash": "2aaafa6a49b6563925fe440891e32717"
+  },
+  "/Users/adityarajkashyap/Desktop/executive-mentor/public/next.svg": {
+    "mtime": 1783743013.5858324,
+    "ast_hash": "8e061864f388b47f33a1c3780831193e",
+    "semantic_hash": "8e061864f388b47f33a1c3780831193e"
+  },
+  "/Users/adityarajkashyap/Desktop/executive-mentor/public/vercel.svg": {
+    "mtime": 1783743013.5858977,
+    "ast_hash": "c0af2f507b369b085b35ef4bbe3bcf1e",
+    "semantic_hash": "c0af2f507b369b085b35ef4bbe3bcf1e"
+  },
+  "/Users/adityarajkashyap/Desktop/executive-mentor/public/window.svg": {
+    "mtime": 1783743013.5859613,
+    "ast_hash": "a2760511c65806022ad20adf74370ff3",
+    "semantic_hash": "a2760511c65806022ad20adf74370ff3"
+  }
 }
