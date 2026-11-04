@@ -17,6 +17,7 @@ const SCREENS: { href: string; label: string; icon: IconName }[] = [
   { href: "/console", label: "Console", icon: "chat" },
   { href: "/roadmap", label: "Roadmap", icon: "map" },
   { href: "/dashboard", label: "Dashboard", icon: "grid" },
+  { href: "/about", label: "About", icon: "book" },
 ];
 
 export function TopNav() {
