@@ -61,7 +61,7 @@ export function TopNav() {
               Executive Mentor
             </div>
             <div className="uc" style={{ fontSize: 9, color: "var(--color-muted)", marginTop: 3, whiteSpace: "nowrap" }}>
-              Wisdom at scale
+              brainlytics
             </div>
           </div>
         </Link>

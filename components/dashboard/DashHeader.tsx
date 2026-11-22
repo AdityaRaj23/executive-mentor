@@ -22,7 +22,7 @@ export function DashHeader() {
           Cohort intelligence
         </h1>
         <div className="mono" style={{ fontSize: 12, color: "var(--color-muted)", margin: 0 }}>
-          Last sync · 2m ago · 1,284 members in scope
+          Last sync · 2m ago
         </div>
       </div>
       <div style={{ display: "flex", gap: 10, flexShrink: 0 }}>

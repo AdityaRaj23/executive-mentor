@@ -20,10 +20,10 @@ export const SKILL_HEATMAP: SkillRow[] = [
 ];
 
 export const METRICS: { id: MetricId; label: string; value: string; delta: string; deltaColor: string }[] = [
-  { id: "users", label: "Total members", value: "1,284", delta: "+42 this week", deltaColor: "var(--color-accent)" },
-  { id: "engagement", label: "Engagement rate", value: "78%", delta: "+4.2% MoM", deltaColor: "var(--color-accent)" },
-  { id: "gap", label: "Top skill gap", value: "Exec presence", delta: "34% of cohort", deltaColor: "var(--color-amber)" },
-  { id: "placement", label: "Placement probability", value: "0.71", delta: "within 12 months", deltaColor: "var(--color-muted)" },
+  { id: "users", label: "Total members", value: "—", delta: "—", deltaColor: "var(--color-accent)" },
+  { id: "engagement", label: "Engagement rate", value: "—", delta: "—", deltaColor: "var(--color-accent)" },
+  { id: "gap", label: "Top skill gap", value: "—", delta: "—", deltaColor: "var(--color-amber)" },
+  { id: "placement", label: "Placement probability", value: "—", delta: "—", deltaColor: "var(--color-muted)" },
 ];
 
 export const CHART_DATA: Record<MetricId, number[]> = {

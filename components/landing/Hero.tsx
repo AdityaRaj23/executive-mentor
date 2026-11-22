@@ -3,7 +3,6 @@ import Link from "next/link";
 import { CTA } from "@/components/shared/CTA";
 import { Kicker } from "@/components/shared/Kicker";
 import { DemoTerminal } from "./DemoTerminal";
-import { Stat } from "./Stat";
 
 export function Hero() {
   return (
@@ -51,11 +50,6 @@ export function Hero() {
             <Link href="/dashboard">
               <CTA size="lg" variant="ghost">See institutional view</CTA>
             </Link>
-          </div>
-          <div style={{ display: "flex", gap: 32, marginTop: 56, color: "var(--color-muted)", fontSize: 12 }}>
-            <Stat label="Cohorts deployed" value="184" />
-            <Stat label="Members guided" value="62,400" />
-            <Stat label="Avg. promo lift" value="2.3×" />
           </div>
         </div>
         <DemoTerminal />
